@@ -20,7 +20,7 @@ def _secret(key, default):
 with st.sidebar:
     st.header("⚙️ Settings")
     host = st.text_input("Ollama host", _secret("OLLAMA_HOST", "http://localhost:11434"))
-    chat_model = st.text_input("Chat model", _secret("CHAT_MODEL", "llama3.2"))
+    chat_model = st.text_input("Chat model", _secret("CHAT_MODEL", "llama3.2:1b"))
     embed_model = st.text_input("Embedding model", _secret("EMBED_MODEL", "nomic-embed-text"))
     top_k = st.slider("Chunks to retrieve (top-k)", 1, 10, 4)
     chunk_size = st.slider("Chunk size (chars)", 300, 2000, 800, 100)
